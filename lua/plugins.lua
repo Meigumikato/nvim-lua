@@ -1,5 +1,5 @@
 
-return require('packer').startup(function()
+return require('packer').startup({function()
 
 	use 'wbthomason/packer.nvim'
 
@@ -7,7 +7,7 @@ return require('packer').startup(function()
 
 	use 'neovim/nvim-lspconfig'
 
-	use {'neoclide/coc.nvim', branch = 'release'}
+	-- use {'neoclide/coc.nvim', branch = 'release'}
 
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
@@ -37,7 +37,7 @@ return require('packer').startup(function()
     requires = {
       'kyazdani42/nvim-web-devicons', -- optional, for file icon
     },
-    config = function() require'nvim-tree'.setup {} end
+		config = function () require('nvim-tree').setup{} end
 	}
 
 	use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
@@ -54,7 +54,9 @@ return require('packer').startup(function()
 	use 'folke/tokyonight.nvim'
 
   use "lukas-reineke/indent-blankline.nvim"
+
 	use 'liuchengxu/vim-which-key'
+
 	use 'Chiel92/vim-autoformat'
 
 	use {
@@ -76,5 +78,39 @@ return require('packer').startup(function()
 
 	use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 
-end)
+	use {
+		"folke/todo-comments.nvim",
+		requires = "nvim-lua/plenary.nvim",
+	}
+	use {
+	  "folke/trouble.nvim",
+		requires = "kyazdani42/nvim-web-devicons",
+		config = function()
+      require("trouble").setup {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+      }
+    end
+	}
+
+	use 'hrsh7th/cmp-nvim-lsp'
+	use 'hrsh7th/cmp-buffer'
+	use 'hrsh7th/cmp-path'
+	use 'hrsh7th/cmp-cmdline'
+	use 'hrsh7th/nvim-cmp'
+
+	use 'L3MON4D3/LuaSnip'
+  use 'saadparwaiz1/cmp_luasnip'
+
+	use 'jackguo380/vim-lsp-cxx-highlight'
+	use 'norcalli/nvim-colorizer.lua'
+	use {'fatih/vim-go',  run = ':GoUpdateBinaries'}
+end,
+	config = {
+    display = {
+      open_fn = require('packer.util').float,
+    }
+	}
+})
 
