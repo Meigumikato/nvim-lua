@@ -1,18 +1,10 @@
-
-local g = vim.g
-vim.o.termguicolors = true
-
--- shorten root folder string
-g.nvim_tree_root_folder_modifier = table.concat {
-  ":t:gs?$?/..", string.rep(" ", 1000), "?:gs?^??"
-}
--- Fix lag
-
-g.nvim_tree_git_hl = 1
-g.nvim_tree_add_trailing = 0
-g.nvim_tree_highlight_opened_files = 0
-g.nvim_tree_indent_markers = 1
-g.nvim_tree_show_icons = {
+vim.g.nvim_tree_git_hl = 1
+vim.g.nvim_tree_add_trailing = 0
+vim.g.nvim_tree_highlight_opened_files = 0
+vim.g.nvim_tree_indent_markers = 1
+vim.g.nvim_tree_auto_open = 1
+vim.g.nvim_tree_auto_close = 1
+vim.g.nvim_tree_show_icons = {
   git = 1,
   folders = 1, -- or 0,
   files = 1, -- or 0,
@@ -66,11 +58,3 @@ vim.g.nvim_tree_icons = {
   }
 }
 
-vim.api.nvim_exec([[
-function! DisableST()
-  return " "
-endfunction
-au BufEnter NvimTree setlocal statusline=%!DisableST()
-]], false)
-
-vim.cmd('hi NvimTreeStatusLineNC guibg=nvim_treebg guifg=nvim_treebg')

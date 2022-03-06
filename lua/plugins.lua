@@ -106,6 +106,7 @@ return require('packer').startup({function()
 	use 'jackguo380/vim-lsp-cxx-highlight'
 	use 'norcalli/nvim-colorizer.lua'
 	use {'fatih/vim-go',  run = ':GoUpdateBinaries'}
+	use 'williamboman/nvim-lsp-installer'
 end,
 	config = {
     display = {
