@@ -15,6 +15,7 @@ require'lspconfig'.sumneko_lua.setup {
     -- This will be the default in neovim 0.7+
     debounce_text_changes = 150,
   },
+	cmd = {'/Users/mirac1e/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/bin/lua-language-server'},
   settings = {
     Lua = {
       runtime = {

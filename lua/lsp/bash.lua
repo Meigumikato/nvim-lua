@@ -9,5 +9,6 @@ require'lspconfig'.bashls.setup({
 	flags = {
   -- This will be the default in neovim 0.7+
     debounce_text_changes = 150,
-  }
+  },
+	cmd = {'/Users/mirac1e/.local/share/nvim/lsp_servers/bash/node_modules/bash-language-server/bin/main.js', 'start'},
 })
