@@ -23,6 +23,7 @@ require('utils/trouble')
 require('utils/notify')
 
 -- layout widget
+-- require('widget/start')
 require('widget/nvim_tree')
 require('widget/bufferline')
 require('widget/lualine')

@@ -193,7 +193,6 @@ end
 
 -- cursor hover message
 vim.cmd [[ autocmd! CursorHold * lua PrintDiagnostics() ]]
-vim.o.updatetime = 250
 vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false, scope="cursor"})]]
 
 

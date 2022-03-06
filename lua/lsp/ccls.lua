@@ -3,10 +3,12 @@ local on_attach = On_attach
 local handlers = Handlers
 local capabilities = require('lsp.cmp')
 
+
+-- local lsp = require('lspconfig')
 require('lspconfig').ccls.setup ({
 	capabilities = capabilities,
 	on_attach = on_attach,
-	handlers=handlers,
+	handlers = handlers,
   flags = {
     -- This will be the default in neovim 0.7+
     debounce_text_changes = 150,
@@ -19,10 +21,11 @@ require('lspconfig').ccls.setup ({
       directory = ".ccls-cache";
     };
 		clang = {
-      excludeArgs = { "-stdc++=20"} ;
+			extraArgs = {'-stdc++=20'};
+      excludeArgs = {'-frounding-math'} ;
     };
-		filetypes = { "c", "cpp"};
 		compilationDatabaseDirectory = "build";
-		-- root_dir = util.root_pattern("build/compile_commands.json", ".ccls", ".git");
+		filetypes = { "c", "cpp"};
+		-- root_dir = lsp.util.root_pattern(".ccls");
   }
 })

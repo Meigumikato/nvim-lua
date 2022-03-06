@@ -61,10 +61,9 @@ require('bufferline').setup {
     -- separator_style = "slant" | "thick" | "thin" | { 'any', 'any' },
     separator_style =  "thin",
     enforce_regular_tabs = true,
-    always_show_bufferline = true,
+    always_show_bufferline = false,
     -- sort_by = 'id' | 'extension' | 'relative_directory' | 'directory' | 'tabs' | function(buffer_a, buffer_b)
     sort_by = 'id',
-		
 		custom_areas = {
 			right = function()
 				local result = {}
@@ -73,19 +72,15 @@ require('bufferline').setup {
 				local warning = vim.diagnostic.get(0, {severity = seve.WARN})
 				local info = vim.diagnostic.get(0, {severity = seve.INFO})
 				local hint = vim.diagnostic.get(0, {severity = seve.HINT})
-		
 				if error ~= 0 then
 					table.insert(result, {text = "  " .. error, guifg = "#EC5241"})
 				end
-		
 				if warning ~= 0 then
 					table.insert(result, {text = "  " .. warning, guifg = "#EFB839"})
 				end
-		
 				if hint ~= 0 then
 					table.insert(result, {text = "  " .. hint, guifg = "#A3BA5E"})
 				end
-		
 				if info ~= 0 then
 					table.insert(result, {text = "  " .. info, guifg = "#7EA9A7"})
 				end

@@ -26,7 +26,7 @@ return require('packer').startup({function()
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
 	-- color theme
-	use 'ajmwagar/vim-deus'
+	use 'theniceboy/nvim-deus'
 	use 'folke/tokyonight.nvim'
 	use {"catppuccin/nvim", as = "catppuccin"}
 
@@ -69,6 +69,14 @@ return require('packer').startup({function()
 	use {"folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons"}
 
 	use {'fatih/vim-go',  run = ':GoUpdateBinaries'}
+
+	use {
+    'goolord/alpha-nvim',
+    requires = { 'kyazdani42/nvim-web-devicons' },
+    config = function ()
+        require'alpha'.setup(require'alpha.themes.startify'.config)
+    end
+	}
 
 end,
 	config = {
