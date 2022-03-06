@@ -27,7 +27,8 @@ require('bufferline').setup {
     diagnostics = "nvim_lsp",
     diagnostics_update_in_insert = false,
     diagnostics_indicator = function(count, level, diagnostics_dict, context)
-      return "("..count..")"
+			local icon = level:match("error") and " " or " "
+			return " " .. icon .. count
     end,
     -- NOTE: this will be called a lot so don't do any heavy processing here
     custom_filter = function(buf_number, buf_numbers)
@@ -68,10 +69,10 @@ require('bufferline').setup {
 			right = function()
 				local result = {}
 				local seve = vim.diagnostic.severity
-				local error = #vim.diagnostic.get(0, {severity = seve.ERROR})
-				local warning = #vim.diagnostic.get(0, {severity = seve.WARN})
-				local info = #vim.diagnostic.get(0, {severity = seve.INFO})
-				local hint = #vim.diagnostic.get(0, {severity = seve.HINT})
+				local error = vim.diagnostic.get(0, {severity = seve.ERROR})
+				local warning = vim.diagnostic.get(0, {severity = seve.WARN})
+				local info = vim.diagnostic.get(0, {severity = seve.INFO})
+				local hint = vim.diagnostic.get(0, {severity = seve.HINT})
 		
 				if error ~= 0 then
 					table.insert(result, {text = "  " .. error, guifg = "#EC5241"})

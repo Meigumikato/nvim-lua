@@ -4,6 +4,9 @@ vim.g.nvim_tree_highlight_opened_files = 0
 vim.g.nvim_tree_indent_markers = 1
 vim.g.nvim_tree_auto_open = 1
 vim.g.nvim_tree_auto_close = 1
+vim.g.nvim_tree_quit_on_open = 1
+vim.g.nvim_tree_hide_dotfiles = 1
+
 vim.g.nvim_tree_show_icons = {
   git = 1,
   folders = 1, -- or 0,
@@ -20,7 +23,7 @@ require'nvim-tree'.setup {
       error = ""
     }
   },
-  filters = {dotfiles = false},
+  filters = {dotfiles = true},
   disable_netrw = true,
   hijack_netrw = true,
   ignore_ft_on_setup = {"dashboard"},

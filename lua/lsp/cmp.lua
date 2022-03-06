@@ -76,17 +76,81 @@ cmp.setup.cmdline(':', {
   })
 })
 
+
+_G.vimrc = _G.vimrc or {}
+_G.vimrc.cmp = _G.vimrc.cmp or {}
+_G.vimrc.cmp.lsp = function()
+  cmp.complete({
+    config = {
+      sources = {
+        { name = 'nvim_lsp' }
+      }
+    }
+  })
+end
+_G.vimrc.cmp.snippet = function()
+  cmp.complete({
+    config = {
+      sources = {
+        { name = 'luasnip' }
+      }
+    }
+  })
+end
+
+vim.cmd([[
+  inoremap <C-x><C-o> <Cmd>lua vimrc.cmp.lsp()<CR>
+  inoremap <C-x><C-s> <Cmd>lua vimrc.cmp.snippet()<CR>
+]])
+
+local kind_icons = {
+  Text = "",
+  Method = "",
+  Function = "",
+  Constructor = "",
+  Field = "",
+  Variable = "",
+  Class = "ﴯ",
+  Interface = "",
+  Module = "",
+  Property = "ﰠ",
+  Unit = "",
+  Value = "",
+  Enum = "",
+  Keyword = "",
+  Snippet = "",
+  Color = "",
+  File = "",
+  Reference = "",
+  Folder = "",
+  EnumMember = "",
+  Constant = "",
+  Struct = "",
+  Event = "",
+  Operator = "",
+  TypeParameter = ""
+}
+
+cmp.setup {
+  formatting = {
+    format = function(entry, vim_item)
+      -- Kind icons
+      vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
+      -- Source
+      vim_item.menu = ({
+        buffer = "[Buffer]",
+        nvim_lsp = "[LSP]",
+        luasnip = "[LuaSnip]",
+        nvim_lua = "[Lua]",
+        latex_symbols = "[LaTeX]",
+      })[entry.source.name]
+      return vim_item
+    end
+  },
+}
+
 -- Setup lspconfig.
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-local lspconfig = require('lspconfig')
-
-local servers = { 'ccls', 'bashls', 'cmake', 'sumneko_lua' }
--- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
-    -- on_attach = my_custom_on_attach,
-    capabilities = capabilities,
-  }
-end
+return capabilities
 

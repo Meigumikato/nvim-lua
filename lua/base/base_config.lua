@@ -18,3 +18,10 @@ vim.o.swapfile = false
 
 vim.o.syntax = 'on'
 vim.o.termguicolors = true
+
+vim.cmd [[ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif]]
+
+vim.cmd[[colorscheme tokyonight]]
+-- vim.cmd[[colorscheme catppuccin]]
+-- vim.cmd[[colorscheme deus]]
+-- vim.cmd[[colorscheme gruvbox]]

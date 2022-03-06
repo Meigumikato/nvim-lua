@@ -8,7 +8,8 @@ map('n', '<Space>wl', '<C-w>l', opt)
 map('n', '<Space>wj', '<C-w>j', opt)
 map('n', '<Space>wk', '<C-w>k', opt)
 map('n', '<Space>s', ':w<CR>', opt)
-map('n', '<Space>q', ':q<CR>', opt)
+map('n', '<Space>q', ':bd<CR>', opt)
+map('n', '<Space>Q', ':qall<CR>', opt)
 
 -- nvimTree
 map('n', '<Space>e', ':NvimTreeToggle<CR>', opt)
@@ -26,6 +27,8 @@ map("n", "<Space>6", "<Cmd>BufferLineGoToBuffer 6<CR>", opt)
 map("n", "<Space>7", "<Cmd>BufferLineGoToBuffer 7<CR>", opt)
 map("n", "<Space>8", "<Cmd>BufferLineGoToBuffer 8<CR>", opt)
 map("n", "<Space>9", "<Cmd>BufferLineGoToBuffer 9<CR>", opt)
+map("n", "bc", "<Cmd>BufferLinePickClose <CR>", opt)
+map("n", "bp", "<Cmd>BufferLinePick <CR>", opt)
 
 -- telescope
 map("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>", opt)

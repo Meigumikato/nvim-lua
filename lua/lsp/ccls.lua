@@ -1,8 +1,12 @@
-local on_attach = require('lsp.common')
+require('lsp.common')
+local on_attach = On_attach
+local handlers = Handlers
+local capabilities = require('lsp.cmp')
 
-local lspconfig = require('lspconfig')
-lspconfig.ccls.setup ({
+require('lspconfig').ccls.setup ({
+	capabilities = capabilities,
 	on_attach = on_attach,
+	handlers=handlers,
   flags = {
     -- This will be the default in neovim 0.7+
     debounce_text_changes = 150,

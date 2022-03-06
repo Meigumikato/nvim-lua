@@ -1,12 +1,15 @@
-
-local on_attach = require ('lsp.common')
+require('lsp.common')
+local on_attach = On_attach
+local handlers = Handlers
 local runtime_path = vim.split(package.path, ';')
-
+local capabilities = require('lsp.cmp')
 
 table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
 
 require'lspconfig'.sumneko_lua.setup {
+	capabilities = capabilities,
+	handlers = handlers,
 	on_attach = on_attach,
 	flags = {
     -- This will be the default in neovim 0.7+
