@@ -21,6 +21,7 @@ require('utils/gitsign')
 require('utils/autopair')
 require('utils/trouble')
 require('utils/notify')
+require('utils/telescope')
 
 -- layout widget
 -- require('widget/start')
