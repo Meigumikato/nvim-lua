@@ -11,7 +11,7 @@ local no_errors, error_msg = pcall(function()
 
   local time
   local profile_info
-  local should_profile = true
+  local should_profile = false
   if should_profile then
     local hrtime = vim.loop.hrtime
     profile_info = {}
@@ -205,6 +205,11 @@ _G.packer_plugins = {
     path = "/home/miracle/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
+  ["open-browser.vim"] = {
+    loaded = true,
+    path = "/home/miracle/.local/share/nvim/site/pack/packer/start/open-browser.vim",
+    url = "https://github.com/tyru/open-browser.vim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/miracle/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -214,6 +219,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/miracle/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["telescope-openbrowser.nvim"] = {
+    loaded = true,
+    path = "/home/miracle/.local/share/nvim/site/pack/packer/start/telescope-openbrowser.nvim",
+    url = "https://github.com/tamago324/telescope-openbrowser.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
