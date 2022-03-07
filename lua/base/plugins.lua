@@ -34,9 +34,14 @@ return require('packer').startup({function()
 	use 'ellisonleao/gruvbox.nvim'
 
 	use 'norcalli/nvim-colorizer.lua'
-  -- widget
-	use {'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim'}
 
+	-- telescope
+	use {'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim'}
+	-- telescope open browser
+	use 'tyru/open-browser.vim'
+	use 'tamago324/telescope-openbrowser.nvim'
+
+  -- widget
 	use {
 		'nvim-lualine/lualine.nvim',
 		requires = { 'kyazdani42/nvim-web-devicons', opt = true }

@@ -15,6 +15,7 @@ vim.o.syntax = 'on'
 vim.o.updatetime = 250
 vim.o.termguicolors = true
 
+vim.g.lsp_cxx_hl_use_text_props = true
 vim.cmd [[ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif]]
 
 vim.cmd[[colorscheme tokyonight]]
