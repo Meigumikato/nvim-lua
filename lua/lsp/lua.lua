@@ -8,6 +8,7 @@ table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
 
 require'lspconfig'.sumneko_lua.setup {
+	cmd = {'/Users/mirac1e/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/bin/lua-language-server'},
 	capabilities = capabilities,
 	handlers = handlers,
 	on_attach = on_attach,
