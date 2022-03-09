@@ -454,7 +454,7 @@ ls.autosnippets = {
 -- in a lua file: search lua-, then c-, then all-snippets.
 ls.filetype_extend("lua", { "c" })
 -- in a cpp file: search c-snippets, then all-snippets only (no cpp-snippets!!).
-ls.filetype_set("cpp", { "c" })
+-- ls.filetype_set("cpp", { "c" })
 
 --[[
 -- Beside defining your own snippets you can also load snippets from "vscode-like" packages
@@ -479,10 +479,10 @@ ls.filetype_set("cpp", { "c" })
 -- We need to tell luasnip that "_" contains global snippets:
 ls.filetype_extend("all", { "_" })
 
--- require("luasnip.loaders.from_snipmate").load({ include = { "c" } }) -- Load only python snippets
+require("luasnip.loaders.from_snipmate").load()
 
 -- require("luasnip.loaders.from_snipmate").load({ path = { "./my-snippets" } }) -- Load snippets from my-snippets folder
 -- If path is not specified, luasnip will look for the `snippets` directory in rtp (for custom-snippet probably
 -- `~/.config/nvim/snippets`).
 
--- require("luasnip.loaders.from_snipmate").lazy_load() -- Lazy loading
+require("luasnip.loaders.from_snipmate").lazy_load() -- Lazy loading

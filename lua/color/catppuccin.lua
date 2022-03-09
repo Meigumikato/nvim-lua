@@ -3,8 +3,8 @@ require('catppuccin').setup{
 	transparent_background = false,
 	term_colors = false,
 	styles = {
-		comments = "italic",
-		functions = "italic",
+		--comments = "italic",
+		--functions = "italic",
 		keywords = "italic",
 		strings = "NONE",
 		variables = "normal",

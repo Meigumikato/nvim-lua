@@ -4,6 +4,9 @@
 --| |\  || | |___| |___  \ V /  | || |  | |
 --|_| \_|___\____|_____|  \_/  |___|_|  |_|
 --
+
+
+
 -- basic
 require('base/base_config')
 require('base/key_map')
@@ -14,7 +17,7 @@ require('code/nvim_treesitter')
 require('code/todo_comments')
 require('code/snippets')
 require('code/comment')
-require('code/todo_comments')
+require('code/indent')
 
 -- code help utils
 require('utils/gitsign')
@@ -41,3 +44,4 @@ require('lsp/ccls')
 require('lsp/cmake')
 require('lsp/lua')
 require('lsp/bash')
+require('lsp/go')
