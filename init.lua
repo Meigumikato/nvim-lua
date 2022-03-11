@@ -15,7 +15,7 @@ require('base/plugins')
 --  plugin config
 require('code/nvim_treesitter')
 require('code/todo_comments')
-require('code/snippets')
+-- require('code/snippets')
 require('code/comment')
 require('code/indent')
 
@@ -36,12 +36,15 @@ require('widget/toggleterm')
 -- color theme
 require('color/tokyonight')
 require('color/catppuccin')
+require('color/gruvbox_flat')
+
+vim.cmd[[source ~/.config/nvim/coc/coc.vim]]
 
 -- lsp and complete
-require('lsp/cmp')
-require('lsp/common')
-require('lsp/ccls')
-require('lsp/cmake')
-require('lsp/lua')
-require('lsp/bash')
-require('lsp/go')
+-- require('lsp/cmp')
+-- require('lsp/common')
+-- require('lsp/ccls')
+-- require('lsp/cmake')
+-- require('lsp/lua')
+-- require('lsp/bash')
+-- require('lsp/go')

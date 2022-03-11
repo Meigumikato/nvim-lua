@@ -34,8 +34,6 @@ map("n", "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>", 
 map("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffer()<cr>", opt)
 map("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>", opt)
 
--- which key
-map("n", "<leader>wq", ":WhichKey <Space><CR>", opt)
 
 -- gitsigns
 -- Navigation
@@ -56,6 +54,7 @@ map('n', '<leader>tb', '<cmd>Gitsigns toggle_current_line_blame<CR>', opt)
 map('n', '<leader>hd', '<cmd>Gitsigns diffthis<CR>', opt)
 map('n', '<leader>hD', '<cmd>lua require"gitsigns".diffthis("~")<CR>', opt)
 map('n', '<leader>td', '<cmd>Gitsigns toggle_deleted<CR>', opt)
+
 -- Text object
 map('o', 'ih', ':<C-U>Gitsigns select_hunk<CR>', opt)
 map('x', 'ih', ':<C-U>Gitsigns select_hunk<CR>', opt)

@@ -21,7 +21,7 @@ require('lspconfig').ccls.setup ({
       directory = ".ccls-cache";
     };
 		clang = {
-			extraArgs = {'-stdc++=20'};
+			extraArgs = {'-stdc++=20, -Wall, -Werror'};
       excludeArgs = {'-frounding-math'} ;
     };
 		compilationDatabaseDirectory = "build";

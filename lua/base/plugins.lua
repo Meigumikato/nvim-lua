@@ -12,22 +12,20 @@ return require('packer').startup({function()
 	use 'tpope/vim-surround'
 
  -- lsp and complete
-	use 'neovim/nvim-lspconfig'
-
-	use 'hrsh7th/cmp-nvim-lsp'
-	use 'hrsh7th/cmp-buffer'
-	use 'hrsh7th/cmp-path'
-	use 'hrsh7th/cmp-cmdline'
-	use 'hrsh7th/nvim-cmp'
-
-	use 'L3MON4D3/LuaSnip'
-  use 'saadparwaiz1/cmp_luasnip'
-
-	use 'williamboman/nvim-lsp-installer'
+	-- use 'neovim/nvim-lspconfig'
+	-- use 'hrsh7th/cmp-nvim-lsp'
+	-- use 'hrsh7th/cmp-buffer'
+	-- use 'hrsh7th/cmp-path'
+	-- use 'hrsh7th/cmp-cmdline'
+	-- use 'hrsh7th/nvim-cmp'
+	-- use 'L3MON4D3/LuaSnip'
+	-- use 'saadparwaiz1/cmp_luasnip'
+	-- use 'williamboman/nvim-lsp-installer'
+	use {'neoclide/coc.nvim', branch = 'release'}
 
   -- highlight
 
-	use 'jackguo380/vim-lsp-cxx-highlight'
+	-- use 'jackguo380/vim-lsp-cxx-highlight'
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
 	-- color theme
@@ -38,7 +36,10 @@ return require('packer').startup({function()
 	use 'numToStr/Comment.nvim'
 	use 'ellisonleao/gruvbox.nvim'
 
+	use "projekt0n/github-nvim-theme"
+	use {'pineapplegiant/spaceduck', branch = 'main'}
 	use 'norcalli/nvim-colorizer.lua'
+	use 'octol/vim-cpp-enhanced-highlight'
 
 	-- telescope
 	use {'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim'}

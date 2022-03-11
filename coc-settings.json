@@ -1,0 +1,106 @@
+{
+	"coc.preferences.enableFloatHighlight": true,
+	"coc.preferences.snippetStatusText": "Ⓢ ",
+	"coc.preferences.extensionUpdateCheck": "daily",
+	"coc.preferences.messageLevel": "error",
+	"coc.source.around.firstMatch": false,
+	"coc.source.buffer.firstMatch": false,
+	"suggest.detailMaxLength": 60,
+	"suggest.noselect": true,
+	"suggest.enablePreselect": false,
+	"suggest.triggerAfterInsertEnter": true,
+	"suggest.autoTrigger": "always",
+	"suggest.timeout": 5000,
+	"suggest.enablePreview": true,
+	"suggest.floatEnable": true,
+	"suggest.detailField": "preview",
+	"suggest.snippetIndicator": "",
+	"suggest.triggerCompletionWait": 100,
+	"suggest.echodocSupport": true,
+	"suggest.completionItemKindLabels": {
+		"class": "ﴯ",
+		"color": "",
+		"constant": "",
+		"default": "",
+		"enum": "",
+		"enumMember": "",
+		"event": "",
+		"field": "",
+		"file": "",
+		"folder": "",
+		"function": "",
+		"interface": "",
+		"keyword": "",
+		"method": "",
+		"module": "",
+		"operator": "",
+		"property": "ﰠ",
+		"reference": "",
+		"snippet": "",
+		"struct": "",
+		"text": "",
+		"typeParameter": "",
+		"unit": "",
+		"value": "",
+		"variable": "",
+		"constructor": ""
+	},
+	"diagnostic.displayByAle": false,
+	"diagnostic.refreshOnInsertMode": false,
+	"diagnostic.checkCurrentLine": true,
+	"diagnostic.virtualTextPrefix": " ❯❯❯ ",
+	"diagnostic.virtualText": false,
+	"diagnostic.enableSign": true,
+	"diagnostic.showDeprecated": true,
+	"diagnostic.errorSign": "",
+	"diagnostic.infoSign": "",
+	"diagnostic.hintSign": "",
+	"diagnostic.warningSign": "⚠",
+	"diagnostic-languageserver.filetypes": {
+		"sh": "shellcheck"
+	},
+	"diagnostic-languageserver.formatFiletypes": {
+		"sh": "shfmt"
+	},
+	"codeLens.enable": true,
+	"codeLens.position": "eol",
+	"translator.engines": [
+		"youdao"
+	],
+    "languageserver": {
+			"ccls": {
+					"command": "ccls",
+					"filetypes": ["c", "cpp", "cc", "c++"],
+					"rootPatterns": [".ccls-root", "build/compile_commands.json"],
+					"initializationOptions": {
+						"cache": {
+							"directory": ".ccls-cache"
+						},
+						"client": {
+							"snippetSupport": true
+						},
+						"compilationDatabaseDirectory": "build",
+						"clang": { 
+							"extraArgs": [ "-std=c++17" ] 
+						},
+						"index": {
+							"thread": 6
+						},
+						"highlight": {
+							"lsRanges": true
+						}
+						
+					}
+			},
+		  "cmake": {
+				"command": "cmake-language-server",
+				"filetypes": ["cmake"],
+				"rootPatterns": [
+					"build/"
+				],
+				"initializationOptions": {
+					"buildDirectory": "build"
+				}
+			}
+		}
+}
