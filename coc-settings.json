@@ -102,5 +102,6 @@
 					"buildDirectory": "build"
 				}
 			}
-		}
+    },
+    "Lua.telemetry.enable": true
 }

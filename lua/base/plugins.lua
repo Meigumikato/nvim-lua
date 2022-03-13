@@ -31,14 +31,9 @@ return require('packer').startup({function()
 	-- color theme
 	use 'theniceboy/nvim-deus'
 	use 'folke/tokyonight.nvim'
-	use {"catppuccin/nvim", as = "catppuccin"}
-
-	use 'numToStr/Comment.nvim'
+	use 'folke/lsp-colors.nvim'
 	use 'ellisonleao/gruvbox.nvim'
-
 	use "projekt0n/github-nvim-theme"
-	use {'pineapplegiant/spaceduck', branch = 'main'}
-	use 'norcalli/nvim-colorizer.lua'
 	use 'octol/vim-cpp-enhanced-highlight'
 
 	-- telescope
@@ -52,32 +47,21 @@ return require('packer').startup({function()
 		'nvim-lualine/lualine.nvim',
 		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
-
 	use {'kyazdani42/nvim-tree.lua',requires = 'kyazdani42/nvim-web-devicons'}
-
 	use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
-
-
 	use {'lewis6991/gitsigns.nvim',requires = 'nvim-lua/plenary.nvim'}
 
+	-- util
+	use 'numToStr/Comment.nvim'
+	use 'honza/vim-snippets'
 	use 'windwp/nvim-autopairs'
-	use 'rcarriga/nvim-notify'
   use "lukas-reineke/indent-blankline.nvim"
-	use 'liuchengxu/vim-which-key'
 	use 'Chiel92/vim-autoformat'
-
 	use "akinsho/toggleterm.nvim"
-
 	use {'iamcco/markdown-preview.nvim',  run = 'cd app && yarn install'}
-
-
 	use {'phaazon/hop.nvim', branch = 'v1'}
-
-
 	use {'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim'}
-
 	use {'folke/todo-comments.nvim', requires = 'nvim-lua/plenary.nvim'}
-	use {"folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons"}
 
 	use {'fatih/vim-go',  run = ':GoUpdateBinaries'}
 

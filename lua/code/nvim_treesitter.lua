@@ -13,8 +13,17 @@ require'nvim-treesitter.configs'.setup {
   },
 	indent = {
 		enable = true
+	},
+	incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "gnn",
+      node_incremental = "gln",
+      scope_incremental = "glc",
+      node_decremental = "glm",
+		}
 	}
 }
 require("nvim-treesitter.install").command_extra_args = {
-    curl = { "--proxy", "socks5://192.168.1.101:1090" },
+    curl = { "--proxy", "socks5://localhost:1090" },
 }

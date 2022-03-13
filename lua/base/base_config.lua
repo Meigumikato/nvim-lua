@@ -29,7 +29,6 @@ vim.g.cpp_experimental_simple_template_highlight = true
 vim.cmd [[ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif]]
 
 -- vim.cmd[[colorscheme tokyonight]]
-
 -- vim.cmd[[colorscheme spaceduck]]
 -- vim.cmd[[colorscheme catppuccin]]
 -- vim.cmd[[colorscheme deus]]

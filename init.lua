@@ -25,6 +25,8 @@ require('utils/autopair')
 require('utils/trouble')
 require('utils/notify')
 require('utils/telescope')
+require('utils/hop')
+
 
 -- layout widget
 -- require('widget/start')
@@ -35,8 +37,8 @@ require('widget/toggleterm')
 
 -- color theme
 require('color/tokyonight')
-require('color/catppuccin')
 require('color/gruvbox_flat')
+require('color/lspcolor')
 
 vim.cmd[[source ~/.config/nvim/coc/coc.vim]]
 
