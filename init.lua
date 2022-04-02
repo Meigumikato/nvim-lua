@@ -22,8 +22,8 @@ require('code/indent')
 -- code help utils
 require('utils/gitsign')
 require('utils/autopair')
-require('utils/trouble')
-require('utils/notify')
+-- require('utils/trouble')
+--require('utils/notify')
 require('utils/telescope')
 require('utils/hop')
 

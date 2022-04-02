@@ -13,7 +13,7 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " fold
 " set foldclose=all " Close folds if you leave them in any way
-set foldcolumn=1 " Show the foldcolumn
+set foldcolumn=0 " Show the foldcolumn
 set foldenable " Turn on folding
 set foldlevel=99 " Autofold everything by default
 " set foldnestmax=1 " I only like to fold outer functions
@@ -25,6 +25,7 @@ set background=dark
 let g:deus_termcolors=256
 
 let g:coc_global_extensions = [
+	\'coc-pyright',
 	\'coc-json',
 	\'coc-clang-format-style-options',
 	\'coc-cmake',

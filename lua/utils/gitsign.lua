@@ -40,6 +40,3 @@ require('gitsigns').setup {
     enable = false
   },
 }
-
-require('gitsigns').setup()
-

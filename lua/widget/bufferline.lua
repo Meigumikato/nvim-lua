@@ -1,6 +1,9 @@
 
 require('bufferline').setup {
   options = {
+
+		-- buffers tabs
+		mod = "tabs",
     -- numbers type "none" | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
     -- NOTE: this plugin is designed with this icon in mind,
     -- and so changing this is NOT recommended, this is intended

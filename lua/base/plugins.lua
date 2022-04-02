@@ -72,6 +72,9 @@ return require('packer').startup({function()
         require'alpha'.setup(require'alpha.themes.startify'.config)
     end
 	}
+	
+	-- copliot
+	use 'github/copilot.vim'
 
 	if packer_bootstrap then
     require('packer').sync()

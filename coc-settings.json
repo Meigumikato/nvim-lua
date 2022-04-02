@@ -62,46 +62,45 @@
 	"diagnostic-languageserver.formatFiletypes": {
 		"sh": "shfmt"
 	},
-	"codeLens.enable": true,
-	"codeLens.position": "eol",
+	"codeLens.enable": false,
 	"translator.engines": [
 		"youdao"
 	],
-    "languageserver": {
-			"ccls": {
-					"command": "ccls",
-					"filetypes": ["c", "cpp", "cc", "c++"],
-					"rootPatterns": [".ccls-root", "build/compile_commands.json"],
-					"initializationOptions": {
-						"cache": {
-							"directory": ".ccls-cache"
-						},
-						"client": {
-							"snippetSupport": true
-						},
-						"compilationDatabaseDirectory": "build",
-						"clang": { 
-							"extraArgs": [ "-std=c++17" ] 
-						},
-						"index": {
-							"thread": 6
-						},
-						"highlight": {
-							"lsRanges": true
-						}
-						
-					}
-			},
-		  "cmake": {
-				"command": "cmake-language-server",
-				"filetypes": ["cmake"],
-				"rootPatterns": [
-					"build/"
-				],
+	"languageserver": {
+		"ccls": {
+				"command": "ccls",
+				"filetypes": ["c", "cpp", "cc", "c++"],
+				"rootPatterns": [".ccls-root", "build/compile_commands.json"],
 				"initializationOptions": {
-					"buildDirectory": "build"
+					"cache": {
+						"directory": ".ccls-cache"
+					},
+					"client": {
+						"snippetSupport": true
+					},
+					"compilationDatabaseDirectory": "build",
+					"clang": { 
+						"extraArgs": [ "-std=c++20" ] 
+					},
+					"index": {
+						"thread": 6
+					},
+					"highlight": {
+						"lsRanges": true
+					}
+					
 				}
+		},
+		"cmake": {
+			"command": "cmake-language-server",
+			"filetypes": ["cmake"],
+			"rootPatterns": [
+				"build/"
+			],
+			"initializationOptions": {
+				"buildDirectory": "build"
 			}
-    },
-    "Lua.telemetry.enable": true
+		}
+	},
+	"rust-analyzer.server.path": "/usr/local/bin/rust-analyzer"
 }

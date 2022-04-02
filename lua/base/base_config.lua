@@ -28,6 +28,8 @@ vim.g.cpp_experimental_simple_template_highlight = true
 -- vim.g.lsp_cxx_hl_use_text_props = true
 vim.cmd [[ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif]]
 
+vim.cmd [[ autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif ]]
+
 -- vim.cmd[[colorscheme tokyonight]]
 -- vim.cmd[[colorscheme spaceduck]]
 -- vim.cmd[[colorscheme catppuccin]]
