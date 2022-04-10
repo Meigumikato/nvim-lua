@@ -8,9 +8,9 @@
 
 
 -- basic
+require('base/plugins')
 require('base/base_config')
 require('base/key_map')
-require('base/plugins')
 
 --  plugin config
 require('code/nvim_treesitter')
