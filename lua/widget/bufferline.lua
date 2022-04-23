@@ -3,7 +3,7 @@ require('bufferline').setup {
   options = {
 
 		-- buffers tabs
-		mod = "tabs",
+		mod = "buffers",
     -- numbers type "none" | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
     -- NOTE: this plugin is designed with this icon in mind,
     -- and so changing this is NOT recommended, this is intended
@@ -28,7 +28,7 @@ require('bufferline').setup {
     max_prefix_length = 15, -- prefix used when a buffer is de-duplicated
     tab_size = 18,
     diagnostics = "coc",
-    diagnostics_update_in_insert = false,
+    diagnostics_update_in_insert = true,
     diagnostics_indicator = function(count, level, diagnostics_dict, context)
 			local icon = level:match("error") and " " or " "
 			return " " .. icon .. count
@@ -64,7 +64,7 @@ require('bufferline').setup {
     -- separator_style = "slant" | "thick" | "thin" | { 'any', 'any' },
     separator_style =  "thin",
     enforce_regular_tabs = true,
-    always_show_bufferline = false,
+    always_show_bufferline = true,
     -- sort_by = 'id' | 'extension' | 'relative_directory' | 'directory' | 'tabs' | function(buffer_a, buffer_b)
     sort_by = 'id',
 		custom_areas = {

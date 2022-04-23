@@ -3,8 +3,9 @@
 	"coc.preferences.snippetStatusText": "Ⓢ ",
 	"coc.preferences.extensionUpdateCheck": "daily",
 	"coc.preferences.messageLevel": "error",
-	"coc.source.around.firstMatch": false,
-	"coc.source.buffer.firstMatch": false,
+	"coc.preferences.silentAutoupdate": true,
+	"coc.preferences.promptInput": true,
+	"workspace.ignoredFiletypes": ["Telescope"],
 	"suggest.detailMaxLength": 60,
 	"suggest.noselect": true,
 	"suggest.enablePreselect": false,
@@ -15,8 +16,7 @@
 	"suggest.floatEnable": true,
 	"suggest.detailField": "preview",
 	"suggest.snippetIndicator": "",
-	"suggest.triggerCompletionWait": 100,
-	"suggest.echodocSupport": true,
+	"suggest.triggerCompletionWait": 50,
 	"suggest.completionItemKindLabels": {
 		"class": "ﴯ",
 		"color": "",
@@ -56,12 +56,6 @@
 	"diagnostic.infoSign": "",
 	"diagnostic.hintSign": "",
 	"diagnostic.warningSign": "⚠",
-	"diagnostic-languageserver.filetypes": {
-		"sh": "shellcheck"
-	},
-	"diagnostic-languageserver.formatFiletypes": {
-		"sh": "shfmt"
-	},
 	"codeLens.enable": false,
 	"translator.engines": [
 		"youdao"

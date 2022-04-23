@@ -1,11 +1,6 @@
 vim.g.nvim_tree_git_hl = 1
 vim.g.nvim_tree_add_trailing = 0
 vim.g.nvim_tree_highlight_opened_files = 0
-vim.g.nvim_tree_indent_markers = 1
--- vim.g.nvim_tree_auto_open = 0
--- vim.g.nvim_tree_auto_close = 1
--- vim.g.nvim_tree_quit_on_open = 1
--- vim.g.nvim_tree_hide_dotfiles = 1
 
 vim.g.nvim_tree_icons = {
   default = "",
@@ -88,6 +83,38 @@ require'nvim-tree'.setup {
       warning = "",
       error = ""
     }
+  },
+	view = {
+    width = 30,
+    height = 30,
+    side = "left",
+    preserve_window_proportions = false,
+    number = false,
+    relativenumber = false,
+    signcolumn = "yes",
+    mappings = {
+      custom_only = false,
+      list = {
+        -- user mappings go here
+      },
+    },
+  },
+  renderer = {
+    indent_markers = {
+      enable = false,
+      icons = {
+        corner = "└ ",
+        edge = "│ ",
+        none = "  ",
+      },
+    },
+    icons = {
+      webdev_colors = true,
+    },
+  },
+  hijack_directories = {
+    enable = true,
+    auto_open = true,
   },
   filters = {dotfiles = true, custom = {}},
   disable_netrw = true,

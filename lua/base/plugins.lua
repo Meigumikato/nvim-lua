@@ -41,6 +41,8 @@ return require('packer').startup({function()
 	-- telescope open browser
 	use 'tyru/open-browser.vim'
 	use 'tamago324/telescope-openbrowser.nvim'
+	use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+	use { 'fannheyward/telescope-coc.nvim' }
 
   -- widget
 	use {
@@ -48,7 +50,7 @@ return require('packer').startup({function()
 		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
 	use {'kyazdani42/nvim-tree.lua',requires = 'kyazdani42/nvim-web-devicons'}
-	use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
+	use {'akinsho/bufferline.nvim', tag = "*", requires = 'kyazdani42/nvim-web-devicons'}
 	use {'lewis6991/gitsigns.nvim',requires = 'nvim-lua/plenary.nvim'}
 
 	-- util
